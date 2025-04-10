@@ -1,42 +1,44 @@
-/* General */
+/*---Estilos universales----*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*----Adaptarse a los navegadores y que el padding y border no se sumen l ancho total*/
 }
-  
+
+/*----Estilo general de la pagina*/
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: #c8e6c9;
-    color: #2c3e50;
-    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif; /*Tipo de Fuente */
+    background-color: #c8e6c9;/* Fondo claro, con color verde */
+    color: #2c3e50; /*Color de fuente*/
+    line-height: 1.6;/* Espaciado vertical entre líneas */
 }
   
-/* Header */
+/*----Clase Header---*/
  
 header {
-    width: 100%;
-    background: url('../img/portada.jpeg') #4fd208 center/cover fixed no-repeat;
+    width: 100%; /*Tamano que usara la parte principal*/
+    background: url('../img/portada.jpeg') #4fd208 center/cover fixed no-repeat; /*Imagen estatica de fondo y sus configuraciones*/
     background-size: cover;
     background-attachment: fixed;
     background-position: center 0;
     color: white;
-    padding: 2;
     text-align: center;
 }
 
 header .portada{
-    position: relative;
+    position: relative; /*Posicion y tamano de la imagen de portada de fondo*/
     height: 790px;
 }
 
 .titulo {
-    font-size: 100px;
+    font-size: 100px; /*Tamanos, color y estilos de fuente del titulo*/
     font-weight: 200px;
     color:#235f25;
 }
   
-.titulo span {
+.titulo span { /*Estilos del texto complementario: color tamano y estilo*/
     display: block;
     color: #235f25;
     font-weight: 100px;
@@ -45,21 +47,23 @@ header .portada{
     font-style: italic;
 }
   
-.subtitulo {
+.subtitulo { /*Estilos del subtitulo*/
     margin-top: 70px;
     font-size: 50px;
     color: #423a06;
 }
-  
+
+/*----Menu de Navegacion---*/
+
 .barra-menu {
-    margin-top: 150px;
-    display: block;
+    margin-top: 150px; /*Tamano de espacio entre los demas elementos*/
+    display: block; /*Define como se vera un elemento de HTML*/
 }
   
 .barra-menu a {
-    font-family:"Open Sans";
+    font-family:"Open Sans";/*Define el estio de texto de la barra de menu incluye el color, tamano, espaciado interno, y animacion*/
     font-size: 20px;
-    font-weight: 30px;
+    font-weight: 30px bold;
     text-decoration: none;
     color: white;
     text-align: center; 
@@ -69,123 +73,129 @@ header .portada{
 }
   
 .barra-menu a:hover {
-    text-decoration: overline;
+    text-decoration: overline;/*Anade efecto al pasar el cursor sobre la barra de menu*/
     color: rgb(126, 244, 0);
+    background: #66bb6a;
 }
   
-/* Contenedor principal */
+/*----Contenedor principal----*/
 .contenedor {
-    max-width: 1200px;
+    max-width: 1200px; /*Determina el tamano, espaciado interno y externo de los elementos*/
     margin: auto;
     padding: 2rem;
 }
   
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; /*Separa a todos las etiquetas section de forma vertical*/
 }
   
 h2 {
-    color: #2e7d32;
+    color: #2e7d32; /*Estilos de los titulos de cada seccion inluyendo espaciado de los margenes*/
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    border-bottom: 2px solid #c8e6c9;
+    border-bottom: 5px solid #00dc07;
     padding-bottom: 0.5rem;
 }
   
 .texto {
-    font-size: 1rem;
+    font-size: 1rem;/*Texto principal*/
     margin-bottom: 1rem;
+    text-align: justify;
+    line-height: 1.5;
 }
   
 section img {
-    max-width: 100%;
+    max-width: 100%;/*Indica los limites de la imagen y su responsividad sea agradable*/
     height: auto;
     border-radius: 10px;
     margin-top: 1rem;
 }
   
-.contenedor .contacto{
+.contenedor .contacto{ /*Tama;o de fuente de la seccion de contactos*/
     font-size: 20px;
 }
-/* Galería de productos */
+
+/*----Galería de productos----*/
+
 #galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    display: grid;/*Muestra en pantalla el estilo de la galeria de grillas*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*responsiva maxima ante la interaccion con maximo de 250px*/
+    gap: 1.5rem; /*Espaciado entre imagenes*/
+    padding: 1rem;
 }
-  
+
+/*Contenedor de Imagenes*/
 .foto {
-    overflow: hidden;
+    overflow: hidden; /*Oculta el exceso de hover*/
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /*Borde suave sombreado*/
+    transition: transform 0.3s ease; /*animacion en hover*/
 }
   
 .foto:hover {
-    transform: scale(1.03);
+    transform: scale(1.03);/*efecto de agrandamiento*/
 }
   
 .foto img {
     width: 100%;
     height: 220px;
-    object-fit: cover;
+    object-fit: cover; /*Rellena la imagen sin comproometer su forma */
     transition: transform 0.4s ease;
 }
   
 .foto:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /*Zoom cobre la imagen cuando se pasa el cursor*/
 }
-/* Contacto*/
 
-/* Formulario */
+/*----Formulario----*/
 .formulario {
-    background: #e8f5e9;
+    background: #e8f5e9; /*Fondo verde claro para el formulario*/
     padding: 2rem;
     max-width: 700px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 3rem auto; /*Centra el formulario y anade un margen inferior*/
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
   
 .formulario h2 {
-    color: #388e3c;
+    color: #388e3c;/*Titulo del formulario*/
     margin-bottom: 1.5rem;
     text-align: center;
 }
   
-.formulario form {
+.formulario form { /*Estilo del formulario con espaciado entre los elementos*/
     display: grid;
     gap: 1rem;
 }
   
 .form-input {
-    display: flex;
+    display: flex;/*Estructura de cada entrada tipo input que sea adaptable*/
     flex-direction: column;
 }
   
-.formulario label {
+.formulario label {/*Estructura de cada entrada tipo label o campo*/
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #2c3e50;
 }
-  
+ 
 .formulario input[type="text"],
 .formulario input[type="email"],
-.formulario input[type="password"] {
+.formulario input[type="password"] {/*Campos de entrada del formulario*/
     padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 8px; /*Redondea las esquinas del boton*/
     font-size: 1rem;
 }
   
-.formulario input[type="submit"] {
+.formulario input[type="submit"]{  /*Boton de envio con animacion al pulsar o pasar por encima con el mouse*/
     padding: 0.75rem;
     background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 3rem;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer; /*Modifica el icono del cursor*/
     transition: background 0.3s;
 }
   
@@ -193,8 +203,9 @@ section img {
     background-color: #388e3c;
 }
   
-/* Footer */
-footer {
+/*----Footer-----*/
+
+footer { /*Estilo del pie de pagina */
     background: #c8e6c9;
     text-align: center;
     padding: 1rem;
