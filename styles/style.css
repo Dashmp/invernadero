@@ -103,7 +103,7 @@ h2 {
     text-align: justify;
     line-height: 1.5;
 }
-  
+
 section img {
     max-width: 100%;/*Indica los limites de la imagen y su responsividad sea agradable*/
     height: auto;
@@ -183,7 +183,8 @@ section img {
 .formulario input[type="email"],
 .formulario input[type="password"] {/*Campos de entrada del formulario*/
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: none;
+    border-left: 3px solid #000;
     border-radius: 8px; /*Redondea las esquinas del boton*/
     font-size: 1rem;
 }
